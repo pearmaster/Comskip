@@ -12,5 +12,4 @@ RUN apk --no-cache add python ffmpeg tzdata bash \
 && apk del builddeps \
 && rm -rf /var/cache/apk/* /tmp/* /tmp/.[!.]*
 
-ENTRYPOINT [ "comskip"]
-CMD [comskip]
+
