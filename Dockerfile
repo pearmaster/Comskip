@@ -20,4 +20,4 @@ COPY webserver.py .
 
 ADD https://gist.githubusercontent.com/vdrover/af5a7e6e38aff14c4ab86db1fee327b5/raw/7bdfdefbafd8de7d916958316f99324dc01a5f6e/comskip.ini .
 
-RUN ["python3", "webserver.py"]
+CMD ["python3", "webserver.py"]
