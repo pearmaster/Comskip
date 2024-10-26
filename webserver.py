@@ -22,7 +22,7 @@ def add_job():
 @app.route('/status', method=['GET'])
 def get_current():
     def gen():
-        while chunk := current_output.read(128)
+        while chunk := current_output.read(128):
             yield chunk
 
     if current_output:
