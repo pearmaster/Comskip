@@ -31,4 +31,5 @@ def get_current():
         return "Nothing", 200
 
 if __name__ == '__main__':
+    print("Running on port 5000")
     app.run(host='0.0.0.0', port=5000)
