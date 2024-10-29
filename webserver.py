@@ -1,4 +1,4 @@
-from flask import Flask, request, jsonify
+from flask import Flask, request, jsonify, Response
 from queue import Queue
 import subprocess
 import threading
@@ -10,7 +10,9 @@ current_output = None
 def background_job():
     global current_output
     while True:
+        print("Waiting for next file")
         path = q.get()
+        print(f"Converting {path}")
         proc = subprocess.Popen(["/usr/local/bin/comskip", "--ini=/app/comskip.ini", path], stdout=subprocess.PIPE)
         current_output = proc.stdout
 
